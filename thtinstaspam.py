@@ -146,7 +146,7 @@ if __name__ == "__main__":
 
 
     print(Fore.RED + BANNER + Style.RESET_ALL)
-    Status(str(len(USERS)) + " Adet Kullanıcı ve " + str(len(PROXIES)) + " Adet Proxy Yüklendi!\n")
+    Status(str(len(USERS)) + " Adet Kullanıcı Yüklendi!\n")
     reportedGuy = input(Fore.GREEN + "SPAM'lanacak Kişinin Kullanıcı Adı: " + Style.RESET_ALL)
     reportedGuyID = input(Fore.GREEN + "SPAM'lanacak Kişinin User ID'si: " + Style.RESET_ALL)
     print("")
