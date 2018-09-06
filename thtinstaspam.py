@@ -30,8 +30,6 @@ class Client:
         self.username = username
         self.password = password
         self.proxy = proxy
-        #if proxy != None:
-        #    self.ses.proxies.update(self.proxy)
     
     def Login(self):
         if self.loggedIn == True:
@@ -123,9 +121,7 @@ def DoitAnakin(reportedGuy,reportedGuyID,username,password,proxy):
     try:
         insta = None
         if proxy != None:
-            insta = Client(username,password,{
-                "https":"https://" + proxy
-            })
+            insta = Client(username,password,None)
         else:
             insta = Client(username,password,None)
         insta.Login()
@@ -142,17 +138,12 @@ def DoitAnakin(reportedGuy,reportedGuyID,username,password,proxy):
 if __name__ == "__main__":
     init()
     userFile = open("kullanicilar.txt","r")
-    proxyFile = open("proxyler.txt","r")
 
     USERS = []
     for user in userFile.readlines():
         if user.replace("\n","").replace("\r","\n") != "":
             USERS.append(user.replace("\n","").replace("\r","\n"))
 
-    PROXIES = []
-    for proxy in proxyFile.readlines():
-        if proxy.replace("\n","").replace("\r","\n") != "":
-            PROXIES.append(proxy.replace("\n","").replace("\r","\n"))
 
     print(Fore.RED + BANNER + Style.RESET_ALL)
     Status(str(len(USERS)) + " Adet Kullanıcı ve " + str(len(PROXIES)) + " Adet Proxy Yüklendi!\n")
@@ -162,7 +153,7 @@ if __name__ == "__main__":
     Status("Saldırı başlatılıyor!\n")
 
     for user in USERS:
-        p = Process(target=DoitAnakin,args=(reportedGuy,reportedGuyID,user.split(" ")[0],user.split(" ")[1],choice(PROXIES)))
+        p = Process(target=DoitAnakin,args=(reportedGuy,reportedGuyID,user.split(" ")[0],user.split(" ")[1],None))
         p.start()
 
 
