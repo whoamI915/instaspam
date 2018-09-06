@@ -10,7 +10,6 @@ BANNER = """
    dBP   dBBBBBP     dBP      dBP dBP dBP `BBBBb   dBP      dBP BB       `BBBBb  dBBBP'   dBP BB   dB'dB'dB' 
   dBP   dBP dBP     dBP      dBP dBP dBP     dBP  dBP      dBP  BB          dBP dBP      dBP  BB  dB'dB'dB'  
  dBP   dBP dBP     dBP      dBP dBP dBP dBBBBP'  dBP      dBBBBBBB     dBBBBP' dBP      dBBBBBBB dB'dB'dB'   
-
     Yapımcı: Hichigo THT
 """
 
@@ -155,7 +154,3 @@ if __name__ == "__main__":
     for user in USERS:
         p = Process(target=DoitAnakin,args=(reportedGuy,reportedGuyID,user.split(" ")[0],user.split(" ")[1],None))
         p.start()
-
-
-
-
