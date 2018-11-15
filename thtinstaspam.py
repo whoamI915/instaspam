@@ -1,3 +1,5 @@
+# coding=utf-8
+
 from requests.sessions import Session
 from requests import get
 from random import choice
