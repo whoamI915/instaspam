@@ -1,5 +1,19 @@
 # coding=utf-8
+#!/usr/bin/env python3
 
+""" 
+Programı değiştirip bir yerde yayınlamadan önce lütfen
+bu programın GPLv3 lisansı altında olduğunu unutmayınız.
+
+Daha Fazla Bilgi:
+https://tr.wikipedia.org/wiki/GNU_Genel_Kamu_Lisans%C4%B1
+https://www.gnu.org/licenses/quick-guide-gplv3.html
+"""
+
+__author__ = "Hichigo TurkHackTeam"
+__license__ = "GPLv3"
+__version__ = "1.5.0"
+__status__ = "Geliştiriliyor"
 from random import choice
 from multiprocessing import Process
 
@@ -58,6 +72,7 @@ class Client:
             "User-Agent":USER_AGENT,
             "X-CSRFToken":homePageResponse.cookies.get_dict()["csrftoken"],
         }
+        "Hichigo Was Here THT"
         loginCookies = {
             "rur":"PRN",
             "csrftoken":homePageResponse.cookies.get_dict()["csrftoken"],
