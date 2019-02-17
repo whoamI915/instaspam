@@ -107,6 +107,7 @@ class Client:
             "User-Agent":USER_AGENT,
             "X-CSRFToken":profileGetResponse.cookies.get_dict()["csrftoken"],
         }
+        "Hichigo was here THT"
         spamData = {
             "reason_id":"1",
             "source_name":"profile"
