@@ -4,7 +4,7 @@
 ##  🔥 Nedir ?
 Instagram'da belirlediğiniz bir hesabı "spam" şikayetleriyle askıya almanızı sağlar. Programın çalışması için güncel bir proxy listesi ve spam isteği yollayacak kullanıcılar gereklidir.
 
-![Screenshot](https://resmim.net/f/dVCM8q.png)
+![Screenshot](https://raw.githubusercontent.com/tarik0/instaspam/master/dVCM8q.png)
 
  ## 💻 Kurulum
 
